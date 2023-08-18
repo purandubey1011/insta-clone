@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="shortcut icon" href="/images/uploads/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/createpost.css">
+</head>
+<body>
+    <div id="main">
+        <div id="side-navbar">
+            <div id="logo">
+                <img id="insta-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+            </div>
+            <ul id="navbar-ul">
+                <li><a href="/instagram">Home</a></li>
+                <li>Search</li>
+                <li>Explore</li>
+                <li>Reels</li>
+                <li>Messages</li>
+                <li>Notifications</li>
+                <li><a href="/createpost">Create post</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li>Log out</li>
+                <li>Saved</li>
+            </ul>
+        </div>
+        <div id="createpost">
+            
+            <div id="createpost-center">
+                <div id="createpost-top-username">Create new post</div>
+                <div id="createpost-bottom">
+                    <div id="createpost-left-img">
+                        <form action="/" id="createpost-img-form">
+                            <input type="file" name="avatar" id="createpostavatar">
+                            <input type="submit" value="">
+                        </form>
+                        <!-- <img src="" alt="" id="createpost-post-image"> -->
+                    </div>
+                    <div id="createpost-right-section">
+                        <div id="createpost-avatar-username">
+                            <img src="/images/puran123-1691566943300.jpg" alt="" id="createpost-avatar">
+                            <h3 id="createpost-username">puran</h3>
+                        </div>
+                        <form action="#" method="post" id="createpost-caption-form">
+                            <textarea name="caption" id="textarea-caption" cols="30" rows="10" placeholder="enter caption..."></textarea>
+                            <input type="submit" id="share-btn" value="share">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="/javascripts/createpost.js"></script>
+</body>
+</html

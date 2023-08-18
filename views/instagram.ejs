@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="/images/uploads/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/instagram.css">
+</head>
+<body>
+    <div id="main">
+        <div id="side-navbar">
+            <div id="logo">
+                <img id="insta-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+            </div>
+            <ul id="navbar-ul">
+                <li>Home</li>
+                <li>Search</li>
+                <li>Explore</li>
+                <li>Reels</li>
+                <li>Messages</li>
+                <li>Notifications</li>
+                <li><a href="/createpost">Create post</a></li>
+                <li><a href="/profile/<%= loggedinuser.username %>">Profile</a></li>
+                <li>Log out</li>
+                <li>Saved</li>
+            </ul>
+        </div>
+        <div id="story-post">
+            <div id="stories">
+                <div id="addstory">
+                    <div id="story-user-img-admin">
+                        <img class="allstoryimg" src="/images/<%= loggedinuser.profileImage %>" alt="">
+                    </div>
+                    <i class="ri-add-line" id="add-logo-story"></i>
+                    <div id="story-username">Add story</div>
+                </div>
+
+                <div class="allstories">
+                    <div id="story-user-img">
+                        <img class="allstoryimg" src="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="">
+                    </div>
+                    <div id="story-username">hello</div>
+                </div>
+                
+            </div>
+            <div id="posts-main">
+                <div class="post">
+                    <div class="post-top">
+                        <div class="post-top-right">
+                            <div class="post-userimg"><img src="https://images.unsplash.com/photo-1661956602153-23384936a1d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt=""></div>
+                        <h2 class="post-username">puran</h2>
+                        </div>
+                        <i class="ri-more-line"></i>
+                    </div>
+                    <div class="postimg">
+                        <img class="post-img-tag" src="https://images.unsplash.com/photo-1664575600850-c4b712e6e2bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right-side-userlist">
+
+            <div id="admin-user-details">
+                <div id="admin-user-lside">
+                    <img id="admin-user-img-rightnav" src="/images/<%= loggedinuser.profileImage %>" alt="">
+                    <h2 id="admin-user-username">puran</h2>
+                </div>
+                <div id="admin-user-right-logout">
+                   <a href="#">logout</a>
+                </div>
+            </div>
+
+            <h3 id="suggestion-tag-right">Suggestions -</h3>
+
+            <div id="admin-user-details-all">
+                <div id="admin-user-lside">
+                    <img id="admin-user-img-rightnav" src="https://images.unsplash.com/photo-1664575600850-c4b712e6e2bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="">
+                    <h2 id="admin-user-username">puran</h2>
+                </div>
+                <div id="admin-user-right-explore">
+                   <a href="#">Explore</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html

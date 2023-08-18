@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="/images/uploads/favicon-32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div id="main">
+        <div id="side-navbar">
+            <div id="logo">
+                <img id="insta-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="">
+            </div>
+            <ul id="navbar-ul">
+                <li><a href="/instagram">Home</a></li>
+                <li>Search</li>
+                <li>Explore</li>
+                <li>Reels</li>
+                <li>Messages</li>
+                <li>Notifications</li>
+                <li>Create post</li>
+                <li>Profile</li>
+                <li>Log out</li>
+                <li>Saved</li>
+            </ul>
+        </div>
+        <div id="profile">
+            
+            <div id="profile-section">
+                <div id="profile-image">
+                    <img id="profileImage" src="/images/<%= user.profileImage %>" alt="">
+                    <% if(loggedinuser.id === user.id){ %>
+                        <form
+                          method="post"
+                          style="display: none"
+                          enctype="multipart/form-data"
+                          action="/upload">
+
+                          <input name="profileImage" id="profile-file" type="file" />
+                          <input type="submit" />
+                        </form>
+                    <% } %>
+                </div>
+                <div id="profile-details">
+                    <div id="profile-top">
+                        <h3><%= user.username %></h3>
+                        <button>Edit profile</button>
+                        <i class="ri-settings-5-fill"></i>
+                    </div>
+                    <div id="profile-info">
+                        <h3><span>0</span>posts</h3>
+                        <h3><span>0</span>followers</h3>
+                        <h3><span>0</span>following</h3>
+                    </div>
+                    <h4><%= user.name %></h4>
+                    <p><%= user.bio %></p>
+                </div>
+            </div>
+            <div id="profile-post">
+                <img class="posts" src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/profile.js"></script>
+</body>
+</html
